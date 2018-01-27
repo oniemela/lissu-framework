@@ -1,0 +1,43 @@
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+/* Buttons */
+button {
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: transparent;
+  text-shadow: none;
+  cursor: pointer;
+  user-select: none; }
+  button:focus {
+    outline-color: transparent; }
+  button:active {
+    outline-color: #303030; }
+  button:hover {
+    transition-duration: 0.3s; }
+
+/* Coloring */
+[green] {
+  border-color: green;
+  color: green; }
+  [green]:hover {
+    background-color: green;
+    color: white; }
+
+[red] {
+  border-color: red;
+  color: red; }
+  [red]:hover {
+    background-color: red;
+    color: white; }
+
+[orange] {
+  border-color: orange;
+  color: orange; }
+  [orange]:hover {
+    background-color: orange;
+    color: white; }
+
+/*# sourceMappingURL=lissu.css.map */
