@@ -1,23 +1,47 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Lissu Framework</title>
-		<link rel="stylesheet" type="text/css" href="lissu.css" media="screen" />
+		<link rel="stylesheet" href="lissu.css" media="screen" />
 	</head>
 	<body>
-		<content>
+		<nav>
+			<ul>
+				<li>Menu link</li>
+				<li>Menu link #2</li>
+			</ul>
+		</nav>
+		
+		<section>
 			<h1>Header 1</h1>
 			<h2>Header 2</h2>
 			<h3>Header 3</h3>
 			<h4>Header 4</h4>
 			<h5>Header 5</h5>
 			<h6>Header 6</h6>
-		</content>
-		<content>
-			<label>Buttons</label>
+		</section>
+		
+		<section>
+			<h2>Buttons</h2>
 			<button>Default button</button>
-			<button green>Saving button</button>
-			<button red>Delete button</button>
-			<button orange>Warning button</button>
-		</content>
+			<button class="green">Saving button</button>
+			<button class="red">Delete button</button>
+			<button class="orange">Warning button</button>
+		</section>
+		
+		<form>
+			<h2>Form fields</h2>
+			<label>Input</label>
+			<input type="text" placeholder="Text field" />
+			<label>Select</label>
+			<select>
+				<option value="1">Option #1</option>
+				<option value="2">Option #2</option>
+			</select>
+		</form>
+		
+		<script src="lissu.js" ></script>
 	</body>
 </html>
