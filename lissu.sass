@@ -1,17 +1,39 @@
+/* Attributes */
+
+$light-dray: #f5f5f5
+$dark-dray: #303030
+$red: #ff0000
+$white: #ffffff
+
+
+
+$background: $white
+$section-background: $light-dray
+$nav-background: $dark-dray
+
+/* Mixins */
+
+/* Choose font color depending on the background color */
+@mixin fontColor($bg-color)
+	@if lightness($bg-color) > 50
+		color: $dark-dray
+	@else
+		color: $white
+
 /* UI STYLING */
 
 body
+	@include 			fontColor($background)
 	margin:				0
-	color:				#303030
 	
 	>section, >form
 		margin:					10px
 		padding:				10px
-		background-color: 		#f5f5f5
+		background-color: 		$section-background
 		
 	nav
-		background-color: 		#404040
-		color: 					white
+		@include 				fontColor($nav-background)
+		background-color: 		$nav-background
 		font-size:				1.2em
 		
 		>ul
@@ -24,9 +46,9 @@ body
 				padding: 				20px
 				
 				&:hover
+					@include 				fontColor($background)
 					transition-duration: 	0.3s
 					background-color: 		white
-					color: 					#303030
 				
 
 	
@@ -44,7 +66,7 @@ label
 
 button
 	border: 			0px solid transparent
-	border-bottom: 		2px solid #303030
+	border-bottom: 		2px solid $dark-dray
 	border-radius: 		4px
 	padding: 			4px
 	background-color: 	transparent
@@ -54,21 +76,23 @@ button
 	&:focus
 		outline-color: 			transparent
 	&:active
-		outline-color: 			#303030
+		outline-color: 			$dark-dray
 	&:hover
 		transition-duration: 	0.3s
-		background-color: 		#303030
+		background-color: 		$dark-dray
+		@include 				fontColor($dark-dray)
 		color: 					white
 
 /* Form fields */
 
 input, select
-	border:				1px inset #303030
+	border:				1px inset $dark-dray
 	border-radius: 		4px
+	font-size:			1em
 	&:focus
 		outline-color: 			transparent
 	&:active
-		outline-color: 			#303030
+		outline-color: 			$dark-dray
 	
 input
 	height:				30px
@@ -81,9 +105,14 @@ select
 	padding-left:		4px
 	padding-right:		4px
 	
-	option
-		font-size:				1.2em
-		
+/* Tables */
+
+table
+	border-collapse: 	collapse
+	
+	thead th, tbody td
+		padding: 				4px
+		border:					1px solid $dark-dray
 		
 /* Coloring */
 
